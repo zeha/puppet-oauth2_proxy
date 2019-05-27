@@ -125,12 +125,12 @@ describe 'oauth2_proxy', :type => :class do
       context 'source =>' do
         context '(unset)' do
           it do
-            should contain_archive('oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz').with(
+            should contain_archive('oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz').with(
               :ensure        => :present,
-              :source        => 'https://github.com/bitly/oauth2_proxy/releases/download/v2.1/oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz',
-              :path          => '/opt/oauth2_proxy/oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz',
+              :source        => 'https://github.com/pusher/oauth2_proxy/releases/download/v3.2.0/oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz',
+              :path          => '/opt/oauth2_proxy/oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz',
               :extract       => true,
-              :extract_path  => '/opt/oauth2_proxy',
+              :extract_path  => '/opt/oauth2_proxy/oauth2_proxy-v3.2.0.linux-amd64.go1.11',
               :checksum_type => 'sha1',
               :user          => 'oauth2'
             )
@@ -146,7 +146,7 @@ describe 'oauth2_proxy', :type => :class do
               :source        => 'https://example.org/foo.tar.gz',
               :path          => '/opt/oauth2_proxy/foo.tar.gz',
               :extract       => true,
-              :extract_path  => '/opt/oauth2_proxy',
+              :extract_path  => '/opt/oauth2_proxy/foo',
               :checksum_type => 'sha1',
               :user          => 'oauth2'
             )
@@ -164,8 +164,8 @@ describe 'oauth2_proxy', :type => :class do
       context 'checksum =>' do
         context '(unset)' do
           it do
-            should contain_archive('oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz').with(
-              :checksum => '7a74b361f9edda0400d02602eacd70596d85b453',
+            should contain_archive('oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz').with(
+              :checksum => 'dbe76a644f40a96c510671a665b77a9683620ee9',
             )
           end
         end
@@ -174,7 +174,7 @@ describe 'oauth2_proxy', :type => :class do
           let(:params) {{ :checksum => 'asdf' }}
 
           it do
-            should contain_archive('oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz').with(
+            should contain_archive('oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz').with(
               :checksum => 'asdf',
             )
           end
@@ -342,12 +342,12 @@ describe 'oauth2_proxy', :type => :class do
       context 'source =>' do
         context '(unset)' do
           it do
-            should contain_archive('oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz').with(
+            should contain_archive('oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz').with(
               :ensure        => :present,
-              :source        => 'https://github.com/bitly/oauth2_proxy/releases/download/v2.1/oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz',
-              :path          => '/opt/oauth2_proxy/oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz',
+              :source        => 'https://github.com/pusher/oauth2_proxy/releases/download/v3.2.0/oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz',
+              :path          => '/opt/oauth2_proxy/oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz',
               :extract       => true,
-              :extract_path  => '/opt/oauth2_proxy',
+              :extract_path  => '/opt/oauth2_proxy/oauth2_proxy-v3.2.0.linux-amd64.go1.11',
               :checksum_type => 'sha1',
               :user          => 'oauth2'
             )
@@ -363,7 +363,7 @@ describe 'oauth2_proxy', :type => :class do
               :source        => 'https://example.org/foo.tar.gz',
               :path          => '/opt/oauth2_proxy/foo.tar.gz',
               :extract       => true,
-              :extract_path  => '/opt/oauth2_proxy',
+              :extract_path  => '/opt/oauth2_proxy/foo',
               :checksum_type => 'sha1',
               :user          => 'oauth2'
             )
@@ -381,8 +381,8 @@ describe 'oauth2_proxy', :type => :class do
       context 'checksum =>' do
         context '(unset)' do
           it do
-            should contain_archive('oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz').with(
-              :checksum => '7a74b361f9edda0400d02602eacd70596d85b453',
+            should contain_archive('oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz').with(
+              :checksum => 'dbe76a644f40a96c510671a665b77a9683620ee9',
             )
           end
         end
@@ -391,7 +391,7 @@ describe 'oauth2_proxy', :type => :class do
           let(:params) {{ :checksum => 'asdf' }}
 
           it do
-            should contain_archive('oauth2_proxy-2.1.linux-amd64.go1.6.tar.gz').with(
+            should contain_archive('oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz').with(
               :checksum => 'asdf',
             )
           end

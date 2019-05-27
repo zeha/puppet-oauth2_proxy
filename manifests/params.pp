@@ -12,10 +12,10 @@ class oauth2_proxy::params {
   $manage_service   = true
   $provider         = 'systemd'
 
-  $version  = '2.1'
-  $tarball  = "oauth2_proxy-${version}.linux-amd64.go1.6.tar.gz"
-  $source   = "https://github.com/bitly/oauth2_proxy/releases/download/v${version}/${tarball}"
-  $checksum = '7a74b361f9edda0400d02602eacd70596d85b453'
+  $version  = '3.2.0'
+  $tarball  = "oauth2_proxy-${version}.linux-amd64.go1.11.tar.gz"
+  $source   = "https://github.com/pusher/oauth2_proxy/releases/download/v${version}/${tarball}"
+  $checksum = 'dbe76a644f40a96c510671a665b77a9683620ee9'
 
   # in theory, this module should work on any linux distro that uses systemd
   # but it has only been tested on el7

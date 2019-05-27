@@ -34,7 +34,7 @@ Description
 -----------
 
 This module installs and configures the
-[oauth2_proxy](https://github.com/bitly/oauth2_proxy) package and provides a
+[oauth2_proxy](https://github.com/pusher/oauth2_proxy) package and provides a
 minimal systemd service unit.
 
 Log messages [from stdout & stderr] are sent to the systemd journal.  This may
@@ -81,8 +81,8 @@ include ::oauth2_proxy
 
 ```puppet
 class { '::oauth2_proxy':
-  source   => 'https://github.com/bitly/oauth2_proxy/releases/download/v2.0.1/oauth2_proxy-2.0.1.linux-amd64.go1.4.2.tar.gz',
-  checksum => '950e08d52c04104f0539e6945fc42052b30c8d1b',
+  source   => 'https://github.com/pusher/oauth2_proxy/releases/download/v3.2.0/oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz',
+  checksum => 'dbe76a644f40a96c510671a665b77a9683620ee9',
 }
 
 ::oauth2_proxy::instance { 'proxy1':
@@ -114,8 +114,8 @@ class { '::oauth2_proxy':
   group        => 'oauth2',
   manage_group => true,
   install_root => '/opt/oauth2_proxy',
-  source       => 'https://github.com/bitly/oauth2_proxy/releases/download/v2.0.1/oauth2_proxy-2.0.1.linux-amd64.go1.4.2.tar.gz',
-  checksum     => '950e08d52c04104f0539e6945fc42052b30c8d1b',
+  source       => 'https://github.com/pusher/oauth2_proxy/releases/download/v3.2.0/oauth2_proxy-v3.2.0.linux-amd64.go1.11.tar.gz',
+  checksum     => 'dbe76a644f40a96c510671a665b77a9683620ee9',
 }
 ```
 
@@ -186,7 +186,7 @@ beyond checking the parameter type.
 
 The configuration file parameters are similar to the CLI options but have some
 variance in terms of name and format.  The
-[`oauth2_proxy.cfg.example`](https://github.com/bitly/oauth2_proxy/blob/master/contrib/oauth2_proxy.cfg.example)
+[`oauth2_proxy.cfg.example`](https://github.com/pusher/oauth2_proxy/blob/master/contrib/oauth2_proxy.cfg.example)
 provided is the best [only] documentation available beyond the source code
 itself.
 
@@ -259,4 +259,4 @@ Contributing
 See Also
 --------
 
-* [oauth2_proxy](https://github.com/bitly/oauth2_proxy)
+* [oauth2_proxy](https://github.com/pusher/oauth2_proxy)
